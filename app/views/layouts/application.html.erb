@@ -196,7 +196,7 @@
 
           <% @pages.each do |page| %>
             <li class="nav-item">
-              <a href="/<%= page[1] %>/index" class="nav-link <%= current_page?(:controller => page[1], :action => 'index') ? 'active' : '' %>">
+              <a href="<%= url_for(action: 'index', controller: page[1]) %>" class="nav-link <%= current_page?(:controller => page[1], :action => 'index') ? 'active' : '' %>">
                 <i class="nav-icon fas fa-tachometer-alt"></i>
                 <p><%= page[0] %></p>
               </a>
